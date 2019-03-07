@@ -4,14 +4,14 @@ import com.hoffrogge.lehreinheit04.Zeichenbrett;
 
 public class Main {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        Zeichenbrett zeichenbrett = new Zeichenbrett();
+		Zeichenbrett zeichenbrett = new Zeichenbrett();
 
-        Zeichenflaeche rahmen = new Zeichenflaeche();
+		Zeichenflaeche zeichenFlaeche = new Zeichenflaeche();
 
-        zeichenbrett.fuegeZeichenbaresObjektHinzu(rahmen);
+		zeichenbrett.fuegeZeichenbaresObjektHinzu(zeichenFlaeche);
 
-        zeichenbrett.zeichneAlleZeichenbarenObjekte();
-    }
+		zeichenbrett.zeichneAlleZeichenbarenObjekte();
+	}
 }
