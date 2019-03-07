@@ -31,15 +31,19 @@ import com.hoffrogge.lehreinheit04.Quadrat;
  * @formater:on 
  */
 public class Zeichenflaeche extends Quadrat {
+	public void zeichnen(Graphics graphics) {
+		super.zeichnen(graphics);
 
-    @Override
-    public void zeichnen(Graphics graphics) {
-        super.zeichnen(graphics);
+		for (int i = 0; i < 800; i = i + 50) {
 
-        /*
-         * Draws a line, using the current color, between the points (x1, y1)
-         * and (x2, y2) in this graphics context's coordinate system.
-         */
-//        graphics.drawLine(x1, y1, x2, y2);
-    }
+			Rechteck rechteck = new Rechteck(i, 0);
+			rechteck.zeichnen(graphics);
+		}
+		for (int i = 0; i < 800; i = i + 50) {
+
+			Rechteck rechteck = new Rechteck(0, i);
+			rechteck.zeichnen(graphics);
+		}
+
+	}
 }

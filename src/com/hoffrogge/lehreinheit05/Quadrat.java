@@ -8,7 +8,6 @@ public class Quadrat extends Rechteck {
 
 		setBreite(kantenlaenge);
 		setLaenge(kantenlaenge);
-
 		System.out.println(berechneDiagonale());
 	}
 }
