@@ -2,6 +2,7 @@ package com.hoffrogge.lehreinheit01;
 
 import java.awt.Graphics;
 
+import com.hoffrogge.lehreinheit04.Punkt;
 import com.hoffrogge.lehreinheit04.Quadrat;
 
 public class Zeichenflaeche extends Quadrat {
@@ -9,10 +10,16 @@ public class Zeichenflaeche extends Quadrat {
 	public void zeichnen(Graphics graphics) {
 		super.zeichnen(graphics);
 
-		int laenge = 100;
+		Punkt punkt = new Punkt(1, 1);
 
-		NormalesRechteck rechteck = new NormalesRechteck(laenge);
-		rechteck.zeichnen(graphics);
+		Quadrat quadrat = new Quadrat();
+		LForm lForm = new LForm(quadrat);
+		// lForm.setMittelpunkt(setMittelpunkt);
+		lForm.setDurchmesser(100);
+		lForm.zeichnen(graphics);
+
+		// NormalesRechteck rechteck = new NormalesRechteck(laenge);
+		// rechteck.zeichnen(graphics);
 
 	}
 
