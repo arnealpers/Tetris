@@ -1,155 +1,35 @@
 package com.hoffrogge.tetris;
 
 import java.awt.Graphics;
-import java.util.List;
+import java.util.ArrayList;
 
-import com.hoffrogge.lehreinheit03.Farbe;
 import com.hoffrogge.lehreinheit04.Punkt;
+import com.hoffrogge.lehreinheit04.Quadrat;
 
 public class TetrominoL extends AllgemeinerTetromino {
 
-    @Override
-    public int getHoechstesY() {
-	// TODO Auto-generated method stub
-	return 0;
-    }
+	public TetrominoL(int KoordinateX, int KoordinateY) {
 
-    @Override
-    public int getTiefstesY() {
-	// TODO Auto-generated method stub
-	return 0;
-    }
+		this.koordinateX = KoordinateX;
+		this.koordinateY = KoordinateY;
+	}
 
-    @Override
-    public int getKanteLinksX() {
-	// TODO Auto-generated method stub
-	return 0;
-    }
+	@Override
+	public void zeichnen(Graphics graphics) {
 
-    @Override
-    public int getKanteRechtsX() {
-	// TODO Auto-generated method stub
-	return 0;
-    }
+		ArrayList<Quadrat> arrayList = new ArrayList<Quadrat>();
 
-    @Override
-    public int getX() {
-	// TODO Auto-generated method stub
-	return 0;
-    }
+		for (int i = 0; i < 4; i++) {
 
-    @Override
-    public void setX(int x) {
-	// TODO Auto-generated method stub
+			Quadrat quadrat = new Quadrat();
+			quadrat.setDurchmesser(durchmesser);
+			quadrat.setLinienFarbe(linienFarbe);
 
-    }
+			arrayList.add(quadrat);
+		}
 
-    @Override
-    public int getY() {
-	// TODO Auto-generated method stub
-	return 0;
-    }
-
-    @Override
-    public void setY(int y) {
-	// TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void bewegeNachUnten() {
-	// TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void bewegeNachRechts() {
-	// TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void bewegeNachLinks() {
-	// TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void rotiereNachLinks() {
-	// TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void rotiereNachRechts() {
-	// TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public boolean faelltAuf(TetrominoSpielstein tetrominoSpielstein) {
-	// TODO Auto-generated method stub
-	return false;
-    }
-
-    @Override
-    public List<TetrominoSpielstein> getViertelBloecke() {
-	// TODO Auto-generated method stub
-	return null;
-    }
-
-    @Override
-    public Farbe getFuellFarbe() {
-	// TODO Auto-generated method stub
-	return null;
-    }
-
-    @Override
-    public void setFuellFarbe(Farbe farbe) {
-	// TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void setMittelpunkt(Punkt mittelpunkt) {
-	// TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public Punkt getMittelPunkt() {
-	// TODO Auto-generated method stub
-	return null;
-    }
-
-    @Override
-    public void setDurchmesser(int d) {
-	// TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public Farbe getLinienFarbe() {
-	// TODO Auto-generated method stub
-	return null;
-    }
-
-    @Override
-    public void setLinienFarbe(Farbe farbe) {
-	// TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void zeichnen(Graphics graphics) {
-	// TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public int compareTo(TetrominoSpielstein o) {
-	// TODO Auto-generated method stub
-	return 0;
-    }
+		arrayList.get(0).setMittelpunkt(new Punkt(koordinateX, koordinateY));
+		arrayList.get(0).zeichnen(graphics);
+	}
 
 }
