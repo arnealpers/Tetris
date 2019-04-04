@@ -46,9 +46,4 @@ public class FensterMitLabel {
 		fenster.setVisible(true);
 	}
 
-	public static void main(String[] args) {
-
-		FensterMitLabel fensterMitLabel = new FensterMitLabel();
-		fensterMitLabel.maleFenster();
-	}
 }

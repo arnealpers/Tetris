@@ -16,7 +16,6 @@ public class TetrominoL extends AllgemeinerTetromino {
 
 	@Override
 	public void zeichnen(Graphics graphics) {
-
 		ArrayList<Quadrat> arrayList = new ArrayList<Quadrat>();
 
 		for (int i = 0; i < 4; i++) {
